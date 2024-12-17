@@ -1,7 +1,7 @@
 // layout.tsx
-import Header from './components/header';
-import Sidebar from './components/sidebar';
-import '../styles/globals.css';
+import Header from './components/Header';
+import Sidebar from './components/Sidebar';
+import './styles/globals.css';
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
   return (

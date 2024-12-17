@@ -3,8 +3,8 @@ import Link from 'next/link';
 
 const Sidebar = () => {
   return (
-    <nav className="bg-slate-900 w-48 min-h-screen p-4 text-white">
-      <ul className="space-y-5 mt-3">
+    <nav className="bg-slate-900 w-48 min-h-screen p-10 text-white">
+      <ul className="space-y-3 mt-3">
         <li>
           <Link href="/books" className="hover:text-gray-400 block">
             Books
