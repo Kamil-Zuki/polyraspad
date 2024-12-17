@@ -1,14 +1,17 @@
 // layout.tsx
 import Header from './components/header';
+import Sidebar from './components/sidebar';
 import '../styles/globals.css';
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
     <html lang="en">
-      <body className="min-h-screen flex flex-col bg-gray-50 text-gray-900">
+      <body className="bg-orange-50 text-gray-900 min-h-screen flex flex-col">
         <Header />
-
-        <main className="flex-1">{children}</main>
+        <div className="flex flex-1">
+          <Sidebar/>
+          <main className="flex-1 p-4">{children}</main>
+        </div>
       </body>
     </html>
   );
