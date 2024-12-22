@@ -1,6 +1,32 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container,
+.content {
+  display: flex;
+}
+
+.container {
+  justify-content: start;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  width: auto;
+}
+
+.content {
+  flex-direction: row;
+  justify-content: space-evenly;
+  height: 100vh;
+  width: auto;
+}
+
+.main-content {
+  width: 50vw;
+}
+
+.side-content {
+  width: 25vw;
 }
