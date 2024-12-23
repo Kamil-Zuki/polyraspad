@@ -7,7 +7,7 @@ import CharacterGallery from './components/CharacterGallery/CharacterGallery';
 
 function App() {
   const kakashiImages = [
-    'src/assets/kakashi/kakashi_image4.jpg',
+    'src/assets/kakashi/kakashi_image5.jpg',
     'src/assets/kakashi/kakashi_image1.jpg',
     'src/assets/kakashi/kakashi_image2.jpg',
     'src/assets/kakashi/kakashi_image3.jpg',
