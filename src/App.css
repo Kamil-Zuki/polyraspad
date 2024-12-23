@@ -1,10 +1,14 @@
 * {
   margin: 0;
   padding: 0;
+  scrollbar-width: thin;
+  scroll-behavior: smooth;
 }
 
 .container,
-.content {
+.content,
+.side-content,
+.main-content {
   display: flex;
 }
 
@@ -24,9 +28,14 @@
 }
 
 .main-content {
+  justify-content: start;
+  gap: 1rem;
+  align-items: center;
+  flex-direction: column;
   width: 50vw;
 }
 
 .side-content {
+  justify-content: center;
   width: 25vw;
 }

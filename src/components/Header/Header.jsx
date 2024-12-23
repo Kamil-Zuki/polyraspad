@@ -5,12 +5,12 @@ import './Header.css'
 const Header = () => {
   return (
     <header className="header">
-      <div className="logo">Polyraspad</div>
-      <nav>
+      <div className="logo"><Link to="/">Polyraspad</Link></div>
+      {/* <nav>
         <ul>
           <li><Link to="/">Home</Link></li>
         </ul>
-      </nav>
+      </nav> */}
     </header>
   );
 };

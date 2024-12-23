@@ -1,0 +1,25 @@
+.gallery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+  padding: 2rem;
+}
+
+.gallery__img {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  width: inherit;
+}
+
+img {
+  width: 55%;
+  height: auto;
+  /* padding: 10px 10px 20px 10px; */
+  /* background: rgba(245, 233, 213, 0.4); */
+  /* border-radius: 10px; */
+  /* border: 1px solid black; */
+}
