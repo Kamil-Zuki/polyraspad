@@ -55,7 +55,7 @@ export default function Home() {
       />
 
       {/* Main content */}
-      <div className="relative z-10 min-h-[calc(100vh-5rem)] flex flex-col items-center justify-center py-8">
+      <div className="relative z-10 min-h-[calc(100vh-7rem)] flex flex-col items-center justify-center py-8">
         <div className="container">
           <motion.div
             initial={{ opacity: 0, y: 50 }}

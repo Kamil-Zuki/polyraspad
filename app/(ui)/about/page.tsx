@@ -36,7 +36,7 @@ export default function About() {
   ];
 
   return (
-    <div className="min-h-[calc(100vh-5rem)] bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-[calc(100vh-7rem)] bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
       <div className="py-8">
         <div className="container max-w-6xl">

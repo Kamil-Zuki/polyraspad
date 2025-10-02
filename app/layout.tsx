@@ -24,7 +24,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       </head>
       <body className="bg-[var(--background)] text-[var(--foreground)] min-h-screen flex flex-col">
         <Navbar />
-        <main className="flex-1 pt-20 pb-16 overflow-x-hidden">
+        <main className="flex-1 pt-28 pb-16 overflow-x-hidden">
           <div className="min-h-full">{children}</div>
         </main>
       </body>
