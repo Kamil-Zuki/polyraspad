@@ -69,7 +69,7 @@ export default function Home() {
               transition={{ delay: 0.2, duration: 0.8 }}
               className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold mb-8 sm:mb-12 bg-gradient-to-r from-white via-blue-100 to-purple-100 bg-clip-text text-transparent leading-tight"
             >
-              Hi, I'm Kamil Karatov
+              Hi, I&apos;m Kamil Karatov
             </motion.h1>
 
             <motion.p

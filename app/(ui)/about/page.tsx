@@ -20,7 +20,7 @@ export default function About() {
     { name: "Docker", level: 75, color: "from-red-400 to-pink-500" },
     { name: "K8s/K3s", level: 75, color: "from-red-400 to-pink-500" },
     { name: "RabbitMQ", level: 70, color: "from-orange-400 to-red-500" },
-    { name: "Radis", level: 70, color: "from-orange-400 to-red-500" },
+    { name: "Redis", level: 70, color: "from-orange-400 to-red-500" },
   ];
 
   const timeline = [
@@ -28,13 +28,15 @@ export default function About() {
       year: "2025",
       title: "Team Lead",
       company: "ООО МСЛ",
-      description: "Leading of 10 developers. Web, AI/ML, Knowledge",
+      description:
+        "Led and mentored a cross-functional team of 10 developers, driving the successful delivery of complex web, AI/ML, and knowledge management projects. Established best practices in agile development, code quality, and team collaboration. Oversaw project planning, task allocation, and performance reviews, resulting in improved productivity and high team engagement. Fostered a culture of innovation and continuous learning, and actively participated in hiring and onboarding processes.",
     },
     {
       year: "2025",
       title: "AI/ML Engineer",
       company: "ООО МСЛ",
-      description: "Working on AI/ML projects. ",
+      description:
+        "Led the design and implementation of AI/ML solutions, including developing scalable services in Go and Python, integrating vector search with Qdrant, and connecting with Google Gemini for advanced language processing. Built an AI-powered relational database search engine to enhance data retrieval and business intelligence.",
     },
     {
       year: "2024",
@@ -74,7 +76,7 @@ export default function About() {
               About Me
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-              I'm a passionate .NET/C# developer with 3+ years of experience in
+              I'm a passionate .NET/C# developer with 4 years of experience in
               building scalable web applications and microservices. I specialize
               in ASP.NET Core, Entity Framework, and modern software
               architecture patterns.
