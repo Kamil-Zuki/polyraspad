@@ -30,8 +30,8 @@ services:
   # polyraspad-dev:
   #   build:
   #     context: .
-  #     dockerfile: Dockerfile.alternative
-  #     target: development
+  #     dockerfile: Dockerfile
+  #     target: builder
   #   ports:
   #     - "3001:3000"
   #   environment:
