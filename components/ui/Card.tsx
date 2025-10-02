@@ -18,7 +18,7 @@ export default function Card({
   glass = false,
   gradient = false,
 }: CardProps) {
-  const baseClasses = "rounded-2xl border transition-all duration-300";
+  const baseClasses = "rounded-2xl border transition-all duration-300 p-xl";
 
   const variants = {
     default: "bg-white/5 border-white/10",
@@ -37,7 +37,7 @@ export default function Card({
 
   return (
     <motion.div whileHover={hover ? { y: -5 } : {}} className={classes}>
-      {children}
+      <div className="flex flex-col h-full gap-md">{children}</div>
     </motion.div>
   );
 }

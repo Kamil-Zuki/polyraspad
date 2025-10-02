@@ -1,15 +1,15 @@
-import './globals.css';
-import Navbar from '../components/Navbar';
-import { ReactNode } from 'react';
+import "./globals.css";
+import Navbar from "../components/Navbar";
+import { ReactNode } from "react";
 
 export const metadata = {
-  title: 'My Personal Site',
-  description: 'Built with Next.js 15 and Tailwind CSS 4',
+  title: "My Personal Site",
+  description: "Built with Next.js 15 and Tailwind CSS 4",
   openGraph: {
-    title: 'My Personal Site',
-    description: 'Explore my projects and skills',
-    url: 'https://your-site-url.com',
-    images: ['/og-image.jpg'],
+    title: "My Personal Site",
+    description: "Explore my projects and skills",
+    url: "https://your-site-url.com",
+    images: ["/og-image.jpg"],
   },
 };
 
@@ -24,7 +24,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       </head>
       <body className="bg-[var(--background)] text-[var(--foreground)]">
         <Navbar />
-        <main className="pt-16">{children}</main>
+        <main className="flex-1 pt-20">{children}</main>
       </body>
     </html>
   );

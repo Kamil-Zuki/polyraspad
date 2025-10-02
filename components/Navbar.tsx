@@ -45,20 +45,20 @@ export default function Navbar() {
           : "bg-transparent"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+      <div className="container">
+        <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
             <Link
               href="/"
-              className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent"
+              className="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent px-2 py-1"
             >
               Kamil
             </Link>
           </motion.div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <nav className="hidden md:flex items-center gap-lg">
             {navItems.map((item, index) => (
               <motion.div
                 key={item.href}
@@ -68,26 +68,26 @@ export default function Navbar() {
               >
                 <Link
                   href={item.href}
-                  className="relative text-white/80 hover:text-white transition-colors duration-300 group"
+                  className="relative text-white/80 hover:text-white transition-colors duration-300 group px-md py-sm text-base lg:text-lg font-medium"
                 >
                   {item.label}
                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-400 to-purple-400 transition-all duration-300 group-hover:w-full"></span>
                 </Link>
               </motion.div>
             ))}
-          </div>
+          </nav>
 
           {/* Dark Mode Toggle & Mobile Menu Button */}
-          <div className="flex items-center space-x-4">
+          <div className="flex items-center gap-sm">
             <motion.button
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
               onClick={toggleDarkMode}
-              className="p-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white hover:bg-white/20 transition-all duration-300"
+              className="p-2.5 sm:p-3 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white hover:bg-white/20 transition-all duration-300"
             >
               {isDark ? (
                 <svg
-                  className="w-5 h-5"
+                  className="w-5 h-5 sm:w-6 sm:h-6"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -101,7 +101,7 @@ export default function Navbar() {
                 </svg>
               ) : (
                 <svg
-                  className="w-5 h-5"
+                  className="w-5 h-5 sm:w-6 sm:h-6"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -121,10 +121,10 @@ export default function Navbar() {
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="md:hidden p-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white"
+              className="md:hidden p-2.5 sm:p-3 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white"
             >
               <svg
-                className="w-6 h-6"
+                className="w-6 h-6 sm:w-7 sm:h-7"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -160,7 +160,7 @@ export default function Navbar() {
             transition={{ duration: 0.3 }}
             className="md:hidden bg-black/40 backdrop-blur-xl border-t border-white/10"
           >
-            <div className="px-4 py-6 space-y-4">
+            <div className="px-lg py-xl flex flex-col gap-md">
               {navItems.map((item, index) => (
                 <motion.div
                   key={item.href}
@@ -171,7 +171,7 @@ export default function Navbar() {
                   <Link
                     href={item.href}
                     onClick={() => setIsMobileMenuOpen(false)}
-                    className="block text-white/80 hover:text-white transition-colors duration-300 py-2"
+                    className="block text-white/80 hover:text-white transition-colors duration-300 py-md px-lg text-lg font-medium rounded-lg hover:bg-white/10"
                   >
                     {item.label}
                   </Link>
