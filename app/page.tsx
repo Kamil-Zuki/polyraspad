@@ -3,6 +3,17 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 
+/**
+ * We use motion.div and other motion components from Framer Motion on the home page
+ * to add smooth entrance and floating animations to various UI elements, making the
+ * landing experience more visually engaging and dynamic. For example, the floating
+ * colored circles and the animated text all use motion.div for their effects.
+ *
+ * The scroll indicator at the bottom (motion.a) is animated for visual interest,
+ * even though there is currently no additional content below to scroll to.
+ * This can be kept for future extensibility, or removed if not needed.
+ */
+
 export default function Home() {
   return (
     <div className="min-h-screen relative overflow-hidden">
@@ -54,7 +65,7 @@ export default function Home() {
         className="absolute bottom-20 left-1/4 w-16 h-16 bg-gradient-to-r from-indigo-400 to-blue-400 rounded-full opacity-20 blur-xl"
       />
 
-      {/* Main content */}
+      {/* Main content with animated entrance using motion.div, motion.h1, and motion.p */}
       <div className="relative z-10 min-h-[calc(100vh-7rem)] flex flex-col items-center justify-center py-8">
         <div className="container">
           <motion.div
@@ -106,12 +117,18 @@ export default function Home() {
           </motion.div>
         </div>
 
-        {/* Scroll indicator */}
-        <motion.div
+        {/* 
+          Scroll indicator with anchor.
+          Note: There is currently no content below to scroll to, so this is just for visual effect.
+          You may remove this if you don't plan to add more content below the fold.
+        */}
+        <motion.a
+          href="#main-content"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1, duration: 0.8 }}
-          className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+          className="absolute bottom-8 left-1/2 transform -translate-x-1/2 cursor-pointer focus:outline-none"
+          aria-label="Scroll to main content"
         >
           <motion.div
             animate={{ y: [0, 10, 0] }}
@@ -124,7 +141,7 @@ export default function Home() {
               className="w-1 h-3 bg-white/70 rounded-full mt-2"
             />
           </motion.div>
-        </motion.div>
+        </motion.a>
       </div>
     </div>
   );
