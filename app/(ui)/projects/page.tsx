@@ -8,9 +8,9 @@ export default function Projects() {
   const projects = [
     {
       id: 1,
-      title: "SteosVoice",
+      title: "Voice AI Platform",
       description:
-        "Microservice for LLM voice generation interaction with high performance, reliability, and fault tolerance. Features S3 storage integration and audio file processing.",
+        "Complete voice generation platform including SteosVoice microservice for LLM interaction and SteosVoice.API for external requests. Features S3 storage, WebSocket communication, comprehensive API documentation, and performance optimization.",
       image: "/api/placeholder/400/300",
       technologies: [
         "C#",
@@ -18,6 +18,9 @@ export default function Projects() {
         "S3 Storage",
         "WebSocket",
         "REST API",
+        "PostgreSQL",
+        "Redis",
+        "Swagger",
       ],
       category: "microservices",
       github: "https://github.com",
@@ -26,21 +29,30 @@ export default function Projects() {
     },
     {
       id: 2,
-      title: "SteosVoice.API",
+      title: "Enterprise Microservices Platform",
       description:
-        "Microservice for processing external user requests with comprehensive API documentation, performance optimization, and database query efficiency.",
+        "STEOSPLATFORM - comprehensive microservices orchestration with routing, AES/SHA-256 encryption, database security, rate limiting, authentication protection, and exception handling systems.",
       image: "/api/placeholder/400/300",
-      technologies: ["C#", "ASP.NET Core", "Swagger", "PostgreSQL", "Redis"],
+      technologies: [
+        "C#",
+        "Microservices",
+        "AES Encryption",
+        "SHA-256",
+        "RabbitMQ",
+        "Redis",
+        "gRPC",
+        "Docker",
+      ],
       category: "microservices",
       github: "https://github.com",
-      live: "https://cybervoice.io/ru/api.html",
+      live: "https://mind-simulation.com/en/",
       featured: true,
     },
     {
       id: 3,
       title: "Partner Account System",
       description:
-        "Full-stack web application for legal entities personal cabinet with real-time notifications, payment registry generation, and email processing.",
+        "Full-stack web application for legal entities with real-time notifications via SignalR, payment registry generation using Stimulsoft, email processing, and admin/client separation. Successfully deployed and serving multiple districts.",
       image: "/api/placeholder/400/300",
       technologies: [
         "ASP.NET Core",
@@ -48,6 +60,9 @@ export default function Projects() {
         "Entity Framework Core",
         "MS SQL Server",
         "Stimulsoft",
+        "HTML/XML Processing",
+        "OAuth 2.0",
+        "Unit Testing",
       ],
       category: "web",
       github: "https://github.com/Kamil-Zuki/partner-account",
@@ -56,27 +71,9 @@ export default function Projects() {
     },
     {
       id: 4,
-      title: "STEOSPLATFORM",
-      description:
-        "Microservices orchestration platform with routing, encryption/hashing services, database encryption, and comprehensive security features.",
-      image: "/api/placeholder/400/300",
-      technologies: [
-        "C#",
-        "Microservices",
-        "AES Encryption",
-        "SHA-256",
-        "RabbitMQ",
-      ],
-      category: "microservices",
-      github: "https://github.com",
-      live: "https://mind-simulation.com/en/",
-      featured: false,
-    },
-    {
-      id: 5,
       title: "Language Learning API",
       description:
-        "Personal project - REST API with microservices architecture to help solve the problem of memorizing foreign words for intermediate and advanced learners.",
+        "Personal REST API with microservices architecture designed to solve advanced foreign language word memorization problems for English and Korean learners.",
       image: "/api/placeholder/400/300",
       technologies: [
         "C#",
@@ -84,6 +81,7 @@ export default function Projects() {
         "Microservices",
         "Entity Framework",
         "PostgreSQL",
+        "Docker",
       ],
       category: "personal",
       github: "https://github.com",
@@ -91,12 +89,18 @@ export default function Projects() {
       featured: false,
     },
     {
-      id: 6,
+      id: 5,
       title: "Portfolio Website",
       description:
-        "Modern, responsive portfolio website showcasing projects, skills, and professional experience built with Next.js and Tailwind CSS.",
+        "Modern, responsive portfolio website showcasing professional experience and projects. Built with latest technologies including Next.js 15, TypeScript, and advanced animations.",
       image: "/api/placeholder/400/300",
-      technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
+      technologies: [
+        "Next.js",
+        "TypeScript",
+        "Tailwind CSS",
+        "Framer Motion",
+        "Docker",
+      ],
       category: "web",
       github: "https://github.com",
       live: "Current Site",
@@ -113,7 +117,7 @@ export default function Projects() {
 
   const filteredProjects =
     activeFilter === "all"
-      ? projects
+      ? projects.filter((project) => !project.featured)
       : projects.filter((project) => project.category === activeFilter);
 
   return (
