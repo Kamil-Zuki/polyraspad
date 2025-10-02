@@ -3,11 +3,12 @@ import Navbar from "../components/Navbar";
 import { ReactNode } from "react";
 
 export const metadata = {
-  title: "My Personal Site",
-  description: "Built with Next.js 15 and Tailwind CSS 4",
+  title: "Kamil Karatov - .NET/C# Developer",
+  description:
+    "Experienced .NET/C# Developer specializing in microservices, ASP.NET Core, and full-stack development",
   openGraph: {
-    title: "My Personal Site",
-    description: "Explore my projects and skills",
+    title: "Kamil Karatov - .NET/C# Developer",
+    description: "Explore my .NET projects and development expertise",
     url: "https://your-site-url.com",
     images: ["/og-image.jpg"],
   },

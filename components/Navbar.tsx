@@ -53,7 +53,7 @@ export default function Navbar() {
               href="/"
               className="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent px-2 py-1"
             >
-              Kamil
+              Kamil Karatov
             </Link>
           </motion.div>
 

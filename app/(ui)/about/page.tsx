@@ -3,35 +3,45 @@ import { motion } from "framer-motion";
 
 export default function About() {
   const skills = [
-    { name: "React/Next.js", level: 90, color: "from-blue-400 to-blue-600" },
-    { name: "TypeScript", level: 85, color: "from-blue-500 to-indigo-600" },
-    { name: "Tailwind CSS", level: 88, color: "from-cyan-400 to-blue-500" },
-    { name: "Node.js", level: 80, color: "from-green-400 to-green-600" },
-    { name: "Python", level: 75, color: "from-yellow-400 to-orange-500" },
-    { name: "Figma", level: 70, color: "from-purple-400 to-pink-500" },
+    { name: "C#", level: 95, color: "from-blue-400 to-blue-600" },
+    { name: "ASP.NET Core", level: 90, color: "from-blue-500 to-indigo-600" },
+    {
+      name: "Entity Framework Core",
+      level: 88,
+      color: "from-cyan-400 to-blue-500",
+    },
+    { name: "Microservices", level: 85, color: "from-green-400 to-green-600" },
+    {
+      name: "MS SQL Server",
+      level: 85,
+      color: "from-yellow-400 to-orange-500",
+    },
+    { name: "PostgreSQL", level: 80, color: "from-purple-400 to-pink-500" },
+    { name: "Docker", level: 75, color: "from-red-400 to-pink-500" },
+    { name: "RabbitMQ", level: 70, color: "from-orange-400 to-red-500" },
   ];
 
   const timeline = [
     {
       year: "2024",
-      title: "Full-Stack Developer",
-      company: "Current Role",
+      title: "Programmer",
+      company: "ООО БИЗНЕС ИНТЕЛЛЕКТ",
       description:
-        "Building modern web applications with React, Next.js, and cutting-edge technologies.",
+        "Developing microservices architecture with C# and ASP.NET Core. Working on SteosVoice platform for LLM voice generation and API services.",
     },
     {
-      year: "2023",
-      title: "Frontend Developer",
-      company: "Previous Company",
+      year: "2022-2024",
+      title: "Chief Specialist",
+      company: "ГУП СК РРЦ СК",
       description:
-        "Specialized in creating responsive and interactive user interfaces.",
+        "Developed full-stack web application for legal entities personal cabinet using ASP.NET Core, SignalR, and Entity Framework Core.",
     },
     {
       year: "2022",
-      title: "Web Developer",
-      company: "Startup",
+      title: "Graduation",
+      company: "North Caucasus Federal University",
       description:
-        "Started my journey in web development, learning the fundamentals.",
+        "Graduated with honors in Computer Science and Information Technology. Started professional development journey.",
     },
   ];
 
@@ -50,9 +60,10 @@ export default function About() {
               About Me
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-              I'm a passionate developer who loves creating digital experiences
-              that make a difference. With a focus on modern web technologies
-              and user-centered design.
+              I'm a passionate .NET/C# developer with 3+ years of experience in
+              building scalable web applications and microservices. I specialize
+              in ASP.NET Core, Entity Framework, and modern software
+              architecture patterns.
             </p>
           </motion.div>
 
@@ -81,25 +92,27 @@ export default function About() {
                 My Story
               </h2>
               <p className="text-gray-300 leading-relaxed text-sm sm:text-base">
-                I started my journey in web development with a curiosity about
-                how things work on the internet. What began as a hobby quickly
-                became a passion for creating beautiful, functional, and
-                user-friendly applications.
+                I started my professional journey as a backend developer,
+                focusing on .NET technologies and building robust web
+                applications. My experience spans from developing full-stack
+                solutions to architecting microservices for high-performance
+                systems.
               </p>
               <p className="text-gray-300 leading-relaxed text-sm sm:text-base">
-                Today, I specialize in building modern web applications using
-                React, Next.js, and TypeScript. I believe in writing clean,
-                maintainable code and creating experiences that users love.
+                Today, I specialize in C# and ASP.NET Core development, with
+                expertise in Entity Framework, SignalR for real-time
+                communication, and implementing security features like rate
+                limiting and authentication systems.
               </p>
               <div className="flex flex-wrap gap-2 sm:gap-4 pt-4">
                 <div className="px-4 py-2 bg-blue-500/20 rounded-full border border-blue-500/30">
-                  <span className="text-blue-300">Problem Solver</span>
+                  <span className="text-blue-300">Backend Specialist</span>
                 </div>
                 <div className="px-4 py-2 bg-purple-500/20 rounded-full border border-purple-500/30">
-                  <span className="text-purple-300">Creative Thinker</span>
+                  <span className="text-purple-300">Microservices Expert</span>
                 </div>
                 <div className="px-4 py-2 bg-green-500/20 rounded-full border border-green-500/30">
-                  <span className="text-green-300">Team Player</span>
+                  <span className="text-green-300">Security Focused</span>
                 </div>
               </div>
             </div>
