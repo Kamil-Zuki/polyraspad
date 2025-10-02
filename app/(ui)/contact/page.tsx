@@ -88,34 +88,34 @@ export default function Contact() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <div className="pt-20 pb-16">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="min-h-[calc(100vh-5rem)] bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="py-8">
+        <div className="container max-w-6xl">
           {/* Header */}
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-center mb-16"
+            className="text-center mb-12 lg:mb-16"
           >
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white via-blue-100 to-purple-100 bg-clip-text text-transparent">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 lg:mb-6 bg-gradient-to-r from-white via-blue-100 to-purple-100 bg-clip-text text-transparent">
               Get In Touch
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
               Have a project in mind or just want to chat? I'd love to hear from
               you. Let's create something amazing together!
             </p>
           </motion.div>
 
-          <div className="grid lg:grid-cols-2 gap-12 items-start">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start">
             {/* Contact Form */}
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.2, duration: 0.8 }}
-              className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10"
+              className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 lg:p-8 border border-white/10"
             >
-              <h2 className="text-2xl font-bold text-white mb-6">
+              <h2 className="text-xl sm:text-2xl font-bold text-white mb-4 lg:mb-6">
                 Send me a message
               </h2>
 
@@ -148,8 +148,11 @@ export default function Contact() {
                   </p>
                 </motion.div>
               ) : (
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="grid md:grid-cols-2 gap-6">
+                <form
+                  onSubmit={handleSubmit}
+                  className="space-y-4 lg:space-y-6"
+                >
+                  <div className="grid sm:grid-cols-2 gap-4 lg:gap-6">
                     <div>
                       <label
                         htmlFor="name"
@@ -164,7 +167,7 @@ export default function Contact() {
                         value={formData.name}
                         onChange={handleChange}
                         required
-                        className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300"
+                        className="w-full px-3 sm:px-4 py-2 sm:py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 text-sm sm:text-base"
                         placeholder="Your name"
                       />
                     </div>
@@ -182,7 +185,7 @@ export default function Contact() {
                         value={formData.email}
                         onChange={handleChange}
                         required
-                        className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300"
+                        className="w-full px-3 sm:px-4 py-2 sm:py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 text-sm sm:text-base"
                         placeholder="your@email.com"
                       />
                     </div>
@@ -221,7 +224,7 @@ export default function Contact() {
                       onChange={handleChange}
                       required
                       rows={6}
-                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 resize-none"
+                      className="w-full px-3 sm:px-4 py-2 sm:py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 resize-none text-sm sm:text-base"
                       placeholder="Tell me about your project or just say hello..."
                     />
                   </div>
@@ -270,18 +273,18 @@ export default function Contact() {
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.4, duration: 0.8 }}
-              className="space-y-8"
+              className="space-y-6 lg:space-y-8"
             >
               {/* Contact Details */}
-              <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
-                <h2 className="text-2xl font-bold text-white mb-6">
+              <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 lg:p-8 border border-white/10">
+                <h2 className="text-xl sm:text-2xl font-bold text-white mb-4 lg:mb-6">
                   Let's connect
                 </h2>
-                <div className="space-y-6">
-                  <div className="flex items-center space-x-4">
-                    <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center">
+                <div className="space-y-4 lg:space-y-6">
+                  <div className="flex items-center space-x-3 sm:space-x-4">
+                    <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center">
                       <svg
-                        className="w-6 h-6 text-white"
+                        className="w-5 h-5 sm:w-6 sm:h-6 text-white"
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
@@ -295,15 +298,19 @@ export default function Contact() {
                       </svg>
                     </div>
                     <div>
-                      <h3 className="text-white font-semibold">Email</h3>
-                      <p className="text-gray-300">hello@example.com</p>
+                      <h3 className="text-white font-semibold text-sm sm:text-base">
+                        Email
+                      </h3>
+                      <p className="text-gray-300 text-sm sm:text-base">
+                        hello@example.com
+                      </p>
                     </div>
                   </div>
 
-                  <div className="flex items-center space-x-4">
-                    <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center">
+                  <div className="flex items-center space-x-3 sm:space-x-4">
+                    <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center">
                       <svg
-                        className="w-6 h-6 text-white"
+                        className="w-5 h-5 sm:w-6 sm:h-6 text-white"
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
@@ -323,15 +330,19 @@ export default function Contact() {
                       </svg>
                     </div>
                     <div>
-                      <h3 className="text-white font-semibold">Location</h3>
-                      <p className="text-gray-300">Your City, Country</p>
+                      <h3 className="text-white font-semibold text-sm sm:text-base">
+                        Location
+                      </h3>
+                      <p className="text-gray-300 text-sm sm:text-base">
+                        Your City, Country
+                      </p>
                     </div>
                   </div>
 
-                  <div className="flex items-center space-x-4">
-                    <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center">
+                  <div className="flex items-center space-x-3 sm:space-x-4">
+                    <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center">
                       <svg
-                        className="w-6 h-6 text-white"
+                        className="w-5 h-5 sm:w-6 sm:h-6 text-white"
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
@@ -345,21 +356,23 @@ export default function Contact() {
                       </svg>
                     </div>
                     <div>
-                      <h3 className="text-white font-semibold">
+                      <h3 className="text-white font-semibold text-sm sm:text-base">
                         Response Time
                       </h3>
-                      <p className="text-gray-300">Usually within 24 hours</p>
+                      <p className="text-gray-300 text-sm sm:text-base">
+                        Usually within 24 hours
+                      </p>
                     </div>
                   </div>
                 </div>
               </div>
 
               {/* Social Links */}
-              <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
-                <h2 className="text-2xl font-bold text-white mb-6">
+              <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 lg:p-8 border border-white/10">
+                <h2 className="text-xl sm:text-2xl font-bold text-white mb-4 lg:mb-6">
                   Follow me
                 </h2>
-                <div className="grid grid-cols-2 gap-4">
+                <div className="grid grid-cols-2 gap-3 sm:gap-4">
                   {socialLinks.map((social, index) => (
                     <motion.a
                       key={social.name}
@@ -368,12 +381,12 @@ export default function Contact() {
                       rel="noopener noreferrer"
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
-                      className="flex items-center space-x-3 p-4 bg-white/10 hover:bg-white/20 rounded-lg transition-all duration-300 group"
+                      className="flex items-center space-x-2 sm:space-x-3 p-3 sm:p-4 bg-white/10 hover:bg-white/20 rounded-lg transition-all duration-300 group"
                     >
                       <div className="text-gray-400 group-hover:text-white transition-colors">
                         {social.icon}
                       </div>
-                      <span className="text-white font-medium">
+                      <span className="text-white font-medium text-sm sm:text-base">
                         {social.name}
                       </span>
                     </motion.a>
@@ -386,10 +399,12 @@ export default function Contact() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.8, duration: 0.6 }}
-                className="bg-gradient-to-r from-blue-500/20 to-purple-500/20 backdrop-blur-sm rounded-2xl p-8 border border-blue-500/30"
+                className="bg-gradient-to-r from-blue-500/20 to-purple-500/20 backdrop-blur-sm rounded-2xl p-6 lg:p-8 border border-blue-500/30"
               >
-                <h3 className="text-xl font-bold text-white mb-3">Fun Fact</h3>
-                <p className="text-gray-300 leading-relaxed">
+                <h3 className="text-lg sm:text-xl font-bold text-white mb-3">
+                  Fun Fact
+                </h3>
+                <p className="text-gray-300 leading-relaxed text-sm sm:text-base">
                   I once built a full-stack application in just 48 hours during
                   a hackathon. It's amazing what you can accomplish with coffee,
                   determination, and a great idea! ☕

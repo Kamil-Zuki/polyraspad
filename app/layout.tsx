@@ -22,9 +22,11 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           rel="stylesheet"
         />
       </head>
-      <body className="bg-[var(--background)] text-[var(--foreground)]">
+      <body className="bg-[var(--background)] text-[var(--foreground)] min-h-screen flex flex-col">
         <Navbar />
-        <main className="flex-1 pt-20">{children}</main>
+        <main className="flex-1 pt-20 pb-16 overflow-x-hidden">
+          <div className="min-h-full">{children}</div>
+        </main>
       </body>
     </html>
   );
