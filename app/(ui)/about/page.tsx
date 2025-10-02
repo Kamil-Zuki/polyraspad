@@ -7,7 +7,7 @@ export default function About() {
     { name: "ASP.NET Core", level: 90, color: "from-blue-500 to-indigo-600" },
     {
       name: "Entity Framework Core",
-      level: 88,
+      level: 96,
       color: "from-cyan-400 to-blue-500",
     },
     { name: "Microservices", level: 85, color: "from-green-400 to-green-600" },
@@ -18,16 +18,30 @@ export default function About() {
     },
     { name: "PostgreSQL", level: 80, color: "from-purple-400 to-pink-500" },
     { name: "Docker", level: 75, color: "from-red-400 to-pink-500" },
+    { name: "K8s/K3s", level: 75, color: "from-red-400 to-pink-500" },
     { name: "RabbitMQ", level: 70, color: "from-orange-400 to-red-500" },
+    { name: "Radis", level: 70, color: "from-orange-400 to-red-500" },
   ];
 
   const timeline = [
+    {
+      year: "2025",
+      title: "Team Lead",
+      company: "ООО МСЛ",
+      description: "Leading of 10 developers. Web, AI/ML, Knowledge",
+    },
+    {
+      year: "2025",
+      title: "AI/ML Engineer",
+      company: "ООО МСЛ",
+      description: "Working on AI/ML projects. ",
+    },
     {
       year: "2024",
       title: "Programmer",
       company: "ООО БИЗНЕС ИНТЕЛЛЕКТ",
       description:
-        "Developing microservices architecture with C# and ASP.NET Core. Working on SteosVoice platform for LLM voice generation and API services.",
+        "Developing microservices architecture with C# and ASP.NET Core. Working on SteosVoice, KnwService, SteosPlatform, platform for LLM voice generation and API services.",
     },
     {
       year: "2022-2024",
