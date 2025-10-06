@@ -112,8 +112,8 @@ export default function Contact() {
               Get In Touch
             </h1>
             <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-              Have a project in mind or just want to chat? I'd love to hear from
-              you. Let's create something amazing together!
+              Have a project in mind or just want to chat? I&#39;d love to hear
+              from you. Let&#39;s create something amazing together!
             </p>
           </motion.div>
 
@@ -154,7 +154,7 @@ export default function Contact() {
                     Message Sent!
                   </h3>
                   <p className="text-gray-300">
-                    Thank you for reaching out. I'll get back to you soon!
+                    Thank you for reaching out. I&#39;ll get back to you soon!
                   </p>
                 </motion.div>
               ) : (
@@ -288,7 +288,7 @@ export default function Contact() {
               {/* Contact Details */}
               <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 lg:p-8 border border-white/10">
                 <h2 className="text-xl sm:text-2xl font-bold text-white mb-4 lg:mb-6">
-                  Let's connect
+                  Let&#39;s connect
                 </h2>
                 <div className="space-y-4 lg:space-y-6">
                   <div className="flex items-center space-x-3 sm:space-x-4">
@@ -409,7 +409,7 @@ export default function Contact() {
                   Follow me
                 </h2>
                 <div className="grid grid-cols-2 gap-3 sm:gap-4">
-                  {socialLinks.map((social, index) => (
+                  {socialLinks.map((social) => (
                     <motion.a
                       key={social.name}
                       href={social.url}
@@ -441,10 +441,10 @@ export default function Contact() {
                   Fun Fact
                 </h3>
                 <p className="text-gray-300 leading-relaxed text-sm sm:text-base">
-                  I'm currently learning frontend development (JS/TypeScript,
-                  React/Next.js) to complement my backend expertise. I also
-                  enjoy studying foreign languages - English (B2) and Korean
-                  (A1)! 🌏
+                  I&#39;m currently learning frontend development
+                  (JS/TypeScript, React/Next.js) to complement my backend
+                  expertise. I also enjoy studying foreign languages - English
+                  (B2) and Korean (A1)! 🌏
                 </p>
               </motion.div>
             </motion.div>

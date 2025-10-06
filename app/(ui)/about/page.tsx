@@ -76,9 +76,9 @@ export default function About() {
               About Me
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-              I'm a passionate .NET/C# developer with 4 years of experience in
-              building scalable web applications and microservices. I specialize
-              in ASP.NET Core, Entity Framework, and modern software
+              I&#39;m a passionate .NET/C# developer with 4 years of experience
+              in building scalable web applications and microservices. I
+              specialize in ASP.NET Core, Entity Framework, and modern software
               architecture patterns.
             </p>
           </motion.div>
@@ -232,11 +232,12 @@ export default function About() {
             className="text-center"
           >
             <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4 lg:mb-6">
-              Let's Work Together
+              Let&#39;s Work Together
             </h2>
             <p className="text-gray-300 mb-6 lg:mb-8 max-w-2xl mx-auto text-sm sm:text-base">
-              I'm always excited to work on new projects and collaborate with
-              amazing people. Let's create something incredible together!
+              I&#39;m always excited to work on new projects and collaborate
+              with amazing people. Let&#39;s create something incredible
+              together!
             </p>
             <motion.a
               href="/contact"

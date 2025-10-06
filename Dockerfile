@@ -47,7 +47,8 @@ COPY --from=builder --chown=nextjs:nodejs /usr/src/app/.next ./.next
 COPY --from=builder --chown=nextjs:nodejs /usr/src/app/public ./public
 
 # Copy necessary config files
-COPY --from=builder --chown=nextjs:nodejs /usr/src/app/next.config.* ./
+COPY --from=builder --chown=nextjs:nodejs /usr/src/app/next.config.ts ./
+COPY --from=builder --chown=nextjs:nodejs /usr/src/app/package.json ./
 
 # Switch to non-root user
 USER nextjs

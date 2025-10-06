@@ -330,8 +330,8 @@ export default function Projects() {
               Interested in Working Together?
             </h2>
             <p className="text-gray-300 mb-6 lg:mb-8 max-w-2xl mx-auto text-sm sm:text-base">
-              I'm always excited to take on new challenges and create amazing
-              digital experiences. Let's discuss your next project!
+              I&#39;m always excited to take on new challenges and create
+              amazing digital experiences. Let&#39;s discuss your next project!
             </p>
             <motion.a
               href="/contact"
