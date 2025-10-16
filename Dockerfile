@@ -1,5 +1,5 @@
 # --------------------
-# 1) Builder stage - Install all dependencies including TypeScript
+# 1) Builder stage
 # --------------------
 FROM node:20-slim AS builder
 WORKDIR /usr/src/app
@@ -22,36 +22,26 @@ ENV NODE_ENV=production
 RUN npm run build
 
 # --------------------
-# 2) Runner stage - Production environment
+# 2) Runner stage
 # --------------------
-FROM node:20-alpine AS runner
+FROM node:20-slim AS runner
 WORKDIR /usr/src/app
 
 # Set production environment
 ENV NODE_ENV=production
-ENV NEXT_TELEMETRY_DISABLED=1
 
-# Install dependencies
-RUN apk add --no-cache libc6-compat
+# Install TypeScript explicitly for next.config.ts
+RUN npm install --save-exact typescript
 
-# Create non-root user for security
-RUN addgroup --system --gid 1001 nodejs
-RUN adduser --system --uid 1001 nextjs
-
-# Copy package files and install production dependencies only
+# Copy package files and install production dependencies
 COPY package*.json ./
-RUN npm ci --omit=dev && npm cache clean --force
+RUN npm ci && npm cache clean --force
 
 # Copy built application from builder stage
-COPY --from=builder --chown=nextjs:nodejs /usr/src/app/.next ./.next
-COPY --from=builder --chown=nextjs:nodejs /usr/src/app/public ./public
-
-# Copy necessary config files
-COPY --from=builder --chown=nextjs:nodejs /usr/src/app/next.config.ts ./
-COPY --from=builder --chown=nextjs:nodejs /usr/src/app/package.json ./
-
-# Switch to non-root user
-USER nextjs
+COPY --from=builder /usr/src/app/.next ./.next
+COPY --from=builder /usr/src/app/public ./public
+COPY --from=builder /usr/src/app/next.config.* ./
+COPY --from=builder /usr/src/app/package.json ./
 
 # Expose port
 EXPOSE 3000
