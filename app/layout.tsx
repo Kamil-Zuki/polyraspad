@@ -16,7 +16,7 @@ export const metadata = {
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
@@ -29,7 +29,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           rel="stylesheet"
         />
       </head>
-      <body className="bg-[var(--background)] text-[var(--foreground)] min-h-screen flex flex-col">
+      <body className="bg-[var(--background)] text-[var(--foreground)] min-h-screen flex flex-col transition-colors duration-300">
         <Navbar />
         <main className="flex-1 pt-28 pb-16 overflow-x-hidden">
           <div className="min-h-full">{children}</div>

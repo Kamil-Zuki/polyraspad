@@ -8,10 +8,10 @@ module.exports = {
     extend: {
       colors: {
         primary: "#3b82f6",
-        secondary: "#8b5cf6",
+        secondary: "#6b7280",
       },
       backgroundImage: {
-        "gradient-hero": "linear-gradient(to bottom right, #3b82f6, #8b5cf6)",
+        "gradient-hero": "linear-gradient(to bottom right, #3b82f6, #6b7280)",
       },
       fontFamily: {
         sans: ["var(--font-sans)", "sans-serif"],

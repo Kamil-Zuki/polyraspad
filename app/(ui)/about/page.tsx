@@ -62,7 +62,7 @@ export default function About() {
   ];
 
   return (
-    <div className="min-h-[calc(100vh-7rem)] bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-[calc(100vh-7rem)] bg-gradient-to-br from-slate-50 via-gray-50 to-slate-50 dark:from-slate-900 dark:via-gray-900 dark:to-slate-900">
       {/* Hero Section */}
       <div className="py-8">
         <div className="container max-w-6xl">
@@ -72,10 +72,10 @@ export default function About() {
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white via-blue-100 to-purple-100 bg-clip-text text-transparent">
+            <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-gray-900 via-blue-700 to-slate-700 dark:from-white dark:via-blue-100 dark:to-gray-100 bg-clip-text text-transparent">
               About Me
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xl text-gray-700 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
               I&#39;m a passionate .NET/C# developer with 4 years of experience
               in building scalable web applications and microservices. I
               specialize in ASP.NET Core, Entity Framework, and modern software
@@ -92,10 +92,10 @@ export default function About() {
           >
             <div className="relative">
               <div className="w-64 h-64 sm:w-80 sm:h-80 mx-auto relative">
-                <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full blur-3xl opacity-30"></div>
-                <div className="relative w-full h-full bg-gradient-to-br from-blue-400 to-purple-500 rounded-full flex items-center justify-center">
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-gray-600 rounded-full blur-3xl opacity-30"></div>
+                <div className="relative w-full h-full bg-gradient-to-br from-blue-400 to-gray-500 rounded-full flex items-center justify-center">
                   <div className="w-56 h-56 sm:w-72 sm:h-72 bg-gradient-to-br from-slate-800 to-slate-900 rounded-full flex items-center justify-center">
-                    <span className="text-4xl sm:text-6xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+                    <span className="text-4xl sm:text-6xl font-bold bg-gradient-to-r from-blue-400 to-gray-400 bg-clip-text text-transparent">
                       K
                     </span>
                   </div>
@@ -104,17 +104,17 @@ export default function About() {
             </div>
 
             <div className="space-y-4 lg:space-y-6">
-              <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4">
+              <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white mb-4">
                 My Story
               </h2>
-              <p className="text-gray-300 leading-relaxed text-sm sm:text-base">
+              <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-sm sm:text-base">
                 I started my professional journey as a backend developer,
                 focusing on .NET technologies and building robust web
                 applications. My experience spans from developing full-stack
                 solutions to architecting microservices for high-performance
                 systems.
               </p>
-              <p className="text-gray-300 leading-relaxed text-sm sm:text-base">
+              <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-sm sm:text-base">
                 Today, I specialize in C# and ASP.NET Core development, with
                 expertise in Entity Framework, SignalR for real-time
                 communication, and implementing security features like rate
@@ -151,17 +151,17 @@ export default function About() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.1 * index, duration: 0.5 }}
-                  className="bg-white/5 backdrop-blur-sm rounded-xl p-4 lg:p-6 border border-white/10"
+                  className="bg-white/70 dark:bg-white/5 backdrop-blur-sm rounded-xl p-4 lg:p-6 border border-gray-200 dark:border-white/10"
                 >
                   <div className="flex justify-between items-center mb-3">
-                    <h3 className="text-white font-semibold text-sm lg:text-base">
+                    <h3 className="text-gray-900 dark:text-white font-semibold text-sm lg:text-base">
                       {skill.name}
                     </h3>
-                    <span className="text-gray-400 text-xs lg:text-sm">
+                    <span className="text-gray-600 dark:text-gray-400 text-xs lg:text-sm">
                       {skill.level}%
                     </span>
                   </div>
-                  <div className="w-full bg-gray-700 rounded-full h-2">
+                  <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
                     <motion.div
                       initial={{ width: 0 }}
                       animate={{ width: `${skill.level}%` }}
@@ -181,11 +181,11 @@ export default function About() {
             transition={{ delay: 0.6, duration: 0.8 }}
             className="mb-16 lg:mb-20"
           >
-            <h2 className="text-2xl sm:text-3xl font-bold text-white text-center mb-8 lg:mb-12">
+            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white text-center mb-8 lg:mb-12">
               My Journey
             </h2>
             <div className="relative">
-              <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-blue-500 to-purple-500"></div>
+              <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-blue-500 to-gray-500"></div>
               {timeline.map((item, index) => (
                 <motion.div
                   key={index}
@@ -201,20 +201,20 @@ export default function About() {
                       index % 2 === 0 ? "pr-4 sm:pr-8" : "pl-4 sm:pl-8"
                     }`}
                   >
-                    <div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 lg:p-6 border border-white/10">
+                    <div className="bg-white/70 dark:bg-white/5 backdrop-blur-sm rounded-xl p-4 lg:p-6 border border-gray-200 dark:border-white/10">
                       <div className="flex items-center mb-2">
-                        <span className="text-blue-400 font-bold text-lg">
+                        <span className="text-blue-600 dark:text-blue-400 font-bold text-lg">
                           {item.year}
                         </span>
-                        <div className="ml-4 w-4 h-4 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full"></div>
+                        <div className="ml-4 w-4 h-4 bg-gradient-to-r from-blue-500 to-gray-500 rounded-full"></div>
                       </div>
-                      <h3 className="text-white font-semibold text-base lg:text-lg mb-1">
+                      <h3 className="text-gray-900 dark:text-white font-semibold text-base lg:text-lg mb-1">
                         {item.title}
                       </h3>
-                      <p className="text-purple-300 text-xs lg:text-sm mb-2">
+                      <p className="text-gray-600 dark:text-gray-400 text-xs lg:text-sm mb-2">
                         {item.company}
                       </p>
-                      <p className="text-gray-300 text-xs lg:text-sm">
+                      <p className="text-gray-700 dark:text-gray-300 text-xs lg:text-sm">
                         {item.description}
                       </p>
                     </div>
@@ -231,10 +231,10 @@ export default function About() {
             transition={{ delay: 1, duration: 0.8 }}
             className="text-center"
           >
-            <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4 lg:mb-6">
+            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white mb-4 lg:mb-6">
               Let&#39;s Work Together
             </h2>
-            <p className="text-gray-300 mb-6 lg:mb-8 max-w-2xl mx-auto text-sm sm:text-base">
+            <p className="text-gray-700 dark:text-gray-300 mb-6 lg:mb-8 max-w-2xl mx-auto text-sm sm:text-base">
               I&#39;m always excited to work on new projects and collaborate
               with amazing people. Let&#39;s create something incredible
               together!
@@ -243,7 +243,7 @@ export default function About() {
               href="/contact"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="inline-block px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full text-white font-semibold text-lg hover:shadow-2xl hover:shadow-purple-500/25 transition-all duration-300"
+              className="inline-block px-8 py-4 bg-gradient-to-r from-blue-500 to-gray-600 rounded-full text-white font-semibold text-lg hover:shadow-2xl hover:shadow-blue-500/25 transition-all duration-300"
             >
               Get In Touch
             </motion.a>

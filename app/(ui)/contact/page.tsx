@@ -98,7 +98,7 @@ export default function Contact() {
   ];
 
   return (
-    <div className="min-h-[calc(100vh-7rem)] bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-[calc(100vh-7rem)] bg-gradient-to-br from-slate-50 via-gray-50 to-slate-50 dark:from-slate-900 dark:via-gray-900 dark:to-slate-900">
       <div className="py-8">
         <div className="container max-w-6xl">
           {/* Header */}
@@ -108,10 +108,10 @@ export default function Contact() {
             transition={{ duration: 0.8 }}
             className="text-center mb-12 lg:mb-16"
           >
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 lg:mb-6 bg-gradient-to-r from-white via-blue-100 to-purple-100 bg-clip-text text-transparent">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 lg:mb-6 bg-gradient-to-r from-gray-900 via-blue-700 to-slate-700 dark:from-white dark:via-blue-100 dark:to-gray-100 bg-clip-text text-transparent">
               Get In Touch
             </h1>
-            <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-lg sm:text-xl text-gray-700 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
               Have a project in mind or just want to chat? I&#39;d love to hear
               from you. Let&#39;s create something amazing together!
             </p>
@@ -123,9 +123,9 @@ export default function Contact() {
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.2, duration: 0.8 }}
-              className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 lg:p-8 border border-white/10"
+              className="bg-white/70 dark:bg-white/5 backdrop-blur-sm rounded-2xl p-6 lg:p-8 border border-gray-200 dark:border-white/10"
             >
-              <h2 className="text-xl sm:text-2xl font-bold text-white mb-4 lg:mb-6">
+              <h2 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white mb-4 lg:mb-6">
                 Send me a message
               </h2>
 
@@ -150,10 +150,10 @@ export default function Contact() {
                       />
                     </svg>
                   </div>
-                  <h3 className="text-xl font-semibold text-white mb-2">
+                  <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
                     Message Sent!
                   </h3>
-                  <p className="text-gray-300">
+                  <p className="text-gray-700 dark:text-gray-300">
                     Thank you for reaching out. I&#39;ll get back to you soon!
                   </p>
                 </motion.div>
@@ -166,7 +166,7 @@ export default function Contact() {
                     <div>
                       <label
                         htmlFor="name"
-                        className="block text-sm font-medium text-gray-300 mb-2"
+                        className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
                       >
                         Name
                       </label>
@@ -177,14 +177,14 @@ export default function Contact() {
                         value={formData.name}
                         onChange={handleChange}
                         required
-                        className="w-full px-3 sm:px-4 py-2 sm:py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 text-sm sm:text-base"
+                        className="w-full px-3 sm:px-4 py-2 sm:py-3 bg-white dark:bg-white/10 border border-gray-300 dark:border-white/20 rounded-lg text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 text-sm sm:text-base"
                         placeholder="Your name"
                       />
                     </div>
                     <div>
                       <label
                         htmlFor="email"
-                        className="block text-sm font-medium text-gray-300 mb-2"
+                        className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
                       >
                         Email
                       </label>
@@ -195,7 +195,7 @@ export default function Contact() {
                         value={formData.email}
                         onChange={handleChange}
                         required
-                        className="w-full px-3 sm:px-4 py-2 sm:py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 text-sm sm:text-base"
+                        className="w-full px-3 sm:px-4 py-2 sm:py-3 bg-white dark:bg-white/10 border border-gray-300 dark:border-white/20 rounded-lg text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 text-sm sm:text-base"
                         placeholder="your@email.com"
                       />
                     </div>
@@ -204,7 +204,7 @@ export default function Contact() {
                   <div>
                     <label
                       htmlFor="subject"
-                      className="block text-sm font-medium text-gray-300 mb-2"
+                      className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
                     >
                       Subject
                     </label>
@@ -215,7 +215,7 @@ export default function Contact() {
                       value={formData.subject}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300"
+                      className="w-full px-4 py-3 bg-white dark:bg-white/10 border border-gray-300 dark:border-white/20 rounded-lg text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300"
                       placeholder="What's this about?"
                     />
                   </div>
@@ -223,7 +223,7 @@ export default function Contact() {
                   <div>
                     <label
                       htmlFor="message"
-                      className="block text-sm font-medium text-gray-300 mb-2"
+                      className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
                     >
                       Message
                     </label>
@@ -234,7 +234,7 @@ export default function Contact() {
                       onChange={handleChange}
                       required
                       rows={6}
-                      className="w-full px-3 sm:px-4 py-2 sm:py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 resize-none text-sm sm:text-base"
+                      className="w-full px-3 sm:px-4 py-2 sm:py-3 bg-white dark:bg-white/10 border border-gray-300 dark:border-white/20 rounded-lg text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 resize-none text-sm sm:text-base"
                       placeholder="Tell me about your project or just say hello..."
                     />
                   </div>
@@ -244,7 +244,7 @@ export default function Contact() {
                     disabled={isSubmitting}
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
-                    className="w-full py-4 bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-semibold rounded-lg transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
+                    className="w-full py-4 bg-gradient-to-r from-blue-500 to-gray-600 hover:from-blue-600 hover:to-gray-700 text-white font-semibold rounded-lg transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
                   >
                     {isSubmitting ? (
                       <>
@@ -292,7 +292,7 @@ export default function Contact() {
                 </h2>
                 <div className="space-y-4 lg:space-y-6">
                   <div className="flex items-center space-x-3 sm:space-x-4">
-                    <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center">
+                    <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r from-blue-500 to-gray-600 rounded-full flex items-center justify-center">
                       <svg
                         className="w-5 h-5 sm:w-6 sm:h-6 text-white"
                         fill="none"
@@ -308,17 +308,17 @@ export default function Contact() {
                       </svg>
                     </div>
                     <div>
-                      <h3 className="text-white font-semibold text-sm sm:text-base">
+                      <h3 className="text-gray-900 dark:text-white font-semibold text-sm sm:text-base">
                         Phone
                       </h3>
-                      <p className="text-gray-300 text-sm sm:text-base">
+                      <p className="text-gray-700 dark:text-gray-300 text-sm sm:text-base">
                         +7 (905) 443-26-98
                       </p>
                     </div>
                   </div>
 
                   <div className="flex items-center space-x-3 sm:space-x-4">
-                    <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center">
+                    <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r from-blue-500 to-gray-600 rounded-full flex items-center justify-center">
                       <svg
                         className="w-5 h-5 sm:w-6 sm:h-6 text-white"
                         fill="none"
@@ -334,17 +334,17 @@ export default function Contact() {
                       </svg>
                     </div>
                     <div>
-                      <h3 className="text-white font-semibold text-sm sm:text-base">
+                      <h3 className="text-gray-900 dark:text-white font-semibold text-sm sm:text-base">
                         Email
                       </h3>
-                      <p className="text-gray-300 text-sm sm:text-base">
+                      <p className="text-gray-700 dark:text-gray-300 text-sm sm:text-base">
                         karatovkamil@yandex.ru
                       </p>
                     </div>
                   </div>
 
                   <div className="flex items-center space-x-3 sm:space-x-4">
-                    <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center">
+                    <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r from-blue-500 to-gray-600 rounded-full flex items-center justify-center">
                       <svg
                         className="w-5 h-5 sm:w-6 sm:h-6 text-white"
                         fill="none"
@@ -366,17 +366,17 @@ export default function Contact() {
                       </svg>
                     </div>
                     <div>
-                      <h3 className="text-white font-semibold text-sm sm:text-base">
+                      <h3 className="text-gray-900 dark:text-white font-semibold text-sm sm:text-base">
                         Location
                       </h3>
-                      <p className="text-gray-300 text-sm sm:text-base">
+                      <p className="text-gray-700 dark:text-gray-300 text-sm sm:text-base">
                         Krasnodar, Russia
                       </p>
                     </div>
                   </div>
 
                   <div className="flex items-center space-x-3 sm:space-x-4">
-                    <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center">
+                    <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r from-blue-500 to-gray-600 rounded-full flex items-center justify-center">
                       <svg
                         className="w-5 h-5 sm:w-6 sm:h-6 text-white"
                         fill="none"
@@ -392,10 +392,10 @@ export default function Contact() {
                       </svg>
                     </div>
                     <div>
-                      <h3 className="text-white font-semibold text-sm sm:text-base">
+                      <h3 className="text-gray-900 dark:text-white font-semibold text-sm sm:text-base">
                         Response Time
                       </h3>
-                      <p className="text-gray-300 text-sm sm:text-base">
+                      <p className="text-gray-700 dark:text-gray-300 text-sm sm:text-base">
                         Usually within 24 hours
                       </p>
                     </div>
@@ -404,8 +404,8 @@ export default function Contact() {
               </div>
 
               {/* Social Links */}
-              <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 lg:p-8 border border-white/10">
-                <h2 className="text-xl sm:text-2xl font-bold text-white mb-4 lg:mb-6">
+              <div className="bg-white/70 dark:bg-white/5 backdrop-blur-sm rounded-2xl p-6 lg:p-8 border border-gray-200 dark:border-white/10">
+                <h2 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white mb-4 lg:mb-6">
                   Follow me
                 </h2>
                 <div className="grid grid-cols-2 gap-3 sm:gap-4">
@@ -417,12 +417,12 @@ export default function Contact() {
                       rel="noopener noreferrer"
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
-                      className="flex items-center space-x-2 sm:space-x-3 p-3 sm:p-4 bg-white/10 hover:bg-white/20 rounded-lg transition-all duration-300 group"
+                      className="flex items-center space-x-2 sm:space-x-3 p-3 sm:p-4 bg-gray-100 dark:bg-white/10 hover:bg-gray-200 dark:hover:bg-white/20 rounded-lg transition-all duration-300 group"
                     >
-                      <div className="text-gray-400 group-hover:text-white transition-colors">
+                      <div className="text-gray-600 dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-white transition-colors">
                         {social.icon}
                       </div>
-                      <span className="text-white font-medium text-sm sm:text-base">
+                      <span className="text-gray-900 dark:text-white font-medium text-sm sm:text-base">
                         {social.name}
                       </span>
                     </motion.a>
@@ -435,12 +435,12 @@ export default function Contact() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.8, duration: 0.6 }}
-                className="bg-gradient-to-r from-blue-500/20 to-purple-500/20 backdrop-blur-sm rounded-2xl p-6 lg:p-8 border border-blue-500/30"
+                className="bg-gradient-to-r from-blue-500/20 to-gray-500/20 backdrop-blur-sm rounded-2xl p-6 lg:p-8 border border-blue-500/30"
               >
-                <h3 className="text-lg sm:text-xl font-bold text-white mb-3">
+                <h3 className="text-lg sm:text-xl font-bold text-gray-900 dark:text-white mb-3">
                   Fun Fact
                 </h3>
-                <p className="text-gray-300 leading-relaxed text-sm sm:text-base">
+                <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-sm sm:text-base">
                   I&#39;m currently learning frontend development
                   (JS/TypeScript, React/Next.js) to complement my backend
                   expertise. I also enjoy studying foreign languages - English

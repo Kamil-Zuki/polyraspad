@@ -18,7 +18,7 @@ export default function Home() {
   return (
     <div className="min-h-screen relative overflow-hidden">
       {/* Animated background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
+      <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-gray-50 to-slate-50 dark:from-blue-900 dark:via-gray-900 dark:to-slate-900">
         <div
           className="absolute inset-0 opacity-20"
           style={{
@@ -38,7 +38,7 @@ export default function Home() {
           repeat: Infinity,
           ease: "easeInOut",
         }}
-        className="absolute top-20 left-10 w-20 h-20 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full opacity-20 blur-xl"
+        className="absolute top-20 left-10 w-20 h-20 bg-gradient-to-r from-blue-400 to-gray-400 rounded-full opacity-20 blur-xl"
       />
       <motion.div
         animate={{
@@ -50,7 +50,7 @@ export default function Home() {
           repeat: Infinity,
           ease: "easeInOut",
         }}
-        className="absolute top-40 right-20 w-32 h-32 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full opacity-20 blur-xl"
+        className="absolute top-40 right-20 w-32 h-32 bg-gradient-to-r from-gray-400 to-slate-400 rounded-full opacity-20 blur-xl"
       />
       <motion.div
         animate={{
@@ -78,7 +78,7 @@ export default function Home() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.8 }}
-              className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold mb-8 sm:mb-12 bg-gradient-to-r from-white via-blue-100 to-purple-100 bg-clip-text text-transparent leading-tight"
+              className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold mb-8 sm:mb-12 bg-gradient-to-r from-gray-900 via-blue-700 to-slate-700 dark:from-white dark:via-blue-100 dark:to-gray-100 bg-clip-text text-transparent leading-tight"
             >
               Hi, I&#39;m Kamil Karatov
             </motion.h1>
@@ -87,7 +87,7 @@ export default function Home() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 0.8 }}
-              className="text-lg sm:text-xl md:text-2xl text-gray-300 mb-12 sm:mb-16 max-w-3xl mx-auto leading-relaxed px-4"
+              className="text-lg sm:text-xl md:text-2xl text-gray-700 dark:text-gray-300 mb-12 sm:mb-16 max-w-3xl mx-auto leading-relaxed px-4"
             >
               Experienced .NET/C# Developer specializing in microservices
               architecture, ASP.NET Core, and building scalable web applications
@@ -101,10 +101,10 @@ export default function Home() {
             >
               <Link
                 href="/projects"
-                className="group relative px-10 py-5 sm:px-12 sm:py-6 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full text-white font-semibold text-lg sm:text-xl overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/25 min-w-[200px] flex items-center justify-center"
+                className="group relative px-10 py-5 sm:px-12 sm:py-6 bg-gradient-to-r from-blue-500 to-gray-600 rounded-full text-white font-semibold text-lg sm:text-xl overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/25 min-w-[200px] flex items-center justify-center"
               >
                 <span className="relative z-10">View My Work</span>
-                <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-pink-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-gray-600 to-slate-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </Link>
 
               <Link
@@ -133,12 +133,12 @@ export default function Home() {
           <motion.div
             animate={{ y: [0, 10, 0] }}
             transition={{ duration: 2, repeat: Infinity }}
-            className="w-6 h-10 border-2 border-white/50 rounded-full flex justify-center"
+            className="w-6 h-10 border-2 border-gray-700 dark:border-white/50 rounded-full flex justify-center"
           >
             <motion.div
               animate={{ y: [0, 12, 0] }}
               transition={{ duration: 2, repeat: Infinity }}
-              className="w-1 h-3 bg-white/70 rounded-full mt-2"
+              className="w-1 h-3 bg-gray-700 dark:bg-white/70 rounded-full mt-2"
             />
           </motion.div>
         </motion.a>
