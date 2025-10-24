@@ -11,7 +11,7 @@ export default function Projects() {
       title: "Voice AI Platform",
       description:
         "Complete voice generation platform including SteosVoice microservice for LLM interaction and SteosVoice.API for external requests. Features S3 storage, WebSocket communication, comprehensive API documentation, and performance optimization.",
-      image: "/api/placeholder/400/300",
+      image: "/projects/voice-ai-platform.jpg",
       technologies: [
         "C#",
         "ASP.NET Core",
@@ -32,7 +32,7 @@ export default function Projects() {
       title: "Enterprise Microservices Platform",
       description:
         "STEOSPLATFORM - comprehensive microservices orchestration with routing, AES/SHA-256 encryption, database security, rate limiting, authentication protection, and exception handling systems.",
-      image: "/api/placeholder/400/300",
+      image: "/projects/microservices-platform.jpg",
       technologies: [
         "C#",
         "Microservices",
@@ -53,7 +53,7 @@ export default function Projects() {
       title: "Partner Account System",
       description:
         "Full-stack web application for legal entities with real-time notifications via SignalR, payment registry generation using Stimulsoft, email processing, and admin/client separation. Successfully deployed and serving multiple districts.",
-      image: "/api/placeholder/400/300",
+      image: "/projects/partner-account.jpg",
       technologies: [
         "ASP.NET Core",
         "SignalR",
@@ -74,7 +74,7 @@ export default function Projects() {
       title: "Language Learning API",
       description:
         "Personal REST API with microservices architecture designed to solve advanced foreign language word memorization problems for English and Korean learners.",
-      image: "/api/placeholder/400/300",
+      image: "/projects/language-learning.jpg",
       technologies: [
         "C#",
         "ASP.NET Core",
@@ -93,7 +93,7 @@ export default function Projects() {
       title: "Portfolio Website",
       description:
         "Modern, responsive portfolio website showcasing professional experience and projects. Built with latest technologies including Next.js 15, TypeScript, and advanced animations.",
-      image: "/api/placeholder/400/300",
+      image: "/projects/portfolio.jpg",
       technologies: [
         "Next.js",
         "TypeScript",
@@ -187,7 +187,18 @@ export default function Projects() {
                       whileHover={{ y: -10 }}
                       className="group relative bg-white/70 dark:bg-white/5 backdrop-blur-sm rounded-2xl overflow-hidden border border-gray-200 dark:border-white/10 hover:border-blue-400 dark:hover:border-white/20 transition-all duration-300"
                     >
-                      <div className="aspect-video bg-gradient-to-br from-blue-500/20 to-gray-500/20 relative overflow-hidden">
+                      <div className="aspect-video bg-gradient-to-br from-blue-500/20 to-gray-500/20 relative overflow-hidden group-hover:scale-105 transition-transform duration-300">
+                        {project.image ? (
+                          <img
+                            src={project.image}
+                            alt={project.title}
+                            className="w-full h-full object-cover"
+                            onError={(e) => {
+                              // Fallback to letter if image fails to load
+                              e.currentTarget.style.display = "none";
+                            }}
+                          />
+                        ) : null}
                         <div className="absolute inset-0 bg-gradient-to-br from-blue-400 to-gray-500 opacity-20"></div>
                         <div className="absolute inset-0 flex items-center justify-center">
                           <span className="text-3xl sm:text-4xl font-bold text-white/50">
@@ -268,7 +279,18 @@ export default function Projects() {
                     whileHover={{ y: -5 }}
                     className="group bg-white/70 dark:bg-white/5 backdrop-blur-sm rounded-2xl overflow-hidden border border-gray-200 dark:border-white/10 hover:border-blue-400 dark:hover:border-white/20 transition-all duration-300"
                   >
-                    <div className="aspect-video bg-gradient-to-br from-blue-500/20 to-gray-500/20 relative overflow-hidden">
+                    <div className="aspect-video bg-gradient-to-br from-blue-500/20 to-gray-500/20 relative overflow-hidden group-hover:scale-105 transition-transform duration-300">
+                      {project.image ? (
+                        <img
+                          src={project.image}
+                          alt={project.title}
+                          className="w-full h-full object-cover"
+                          onError={(e) => {
+                            // Fallback to letter if image fails to load
+                            e.currentTarget.style.display = "none";
+                          }}
+                        />
+                      ) : null}
                       <div className="absolute inset-0 bg-gradient-to-br from-blue-400 to-gray-500 opacity-20"></div>
                       <div className="absolute inset-0 flex items-center justify-center">
                         <span className="text-2xl sm:text-3xl font-bold text-white/50">
