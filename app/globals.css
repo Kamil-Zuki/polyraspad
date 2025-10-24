@@ -1,16 +1,16 @@
 @import "tailwindcss";
 
 :root {
-  /* Light mode colors */
-  --background: #ffffff;
-  --foreground: #1a1a1a;
+  /* Dark mode colors - default and only theme */
+  --background: #0a0a0a;
+  --foreground: #ededed;
   --primary: #3b82f6;
   --secondary: #6b7280;
   --accent: #06b6d4;
   --muted: #6b7280;
-  --border: #e5e7eb;
-  --card: #f9fafb;
-  --card-foreground: #1a1a1a;
+  --border: #374151;
+  --card: #111827;
+  --card-foreground: #f9fafb;
 
   /* Modern spacing system */
   --space-xs: 0.25rem;
@@ -44,18 +44,7 @@
     0 8px 10px -6px rgb(0 0 0 / 0.1);
 }
 
-.dark {
-  /* Dark mode colors */
-  --background: #0a0a0a;
-  --foreground: #ededed;
-  --primary: #3b82f6;
-  --secondary: #6b7280;
-  --accent: #06b6d4;
-  --muted: #6b7280;
-  --border: #374151;
-  --card: #111827;
-  --card-foreground: #f9fafb;
-}
+/* Removed .dark class - dark mode is now the default and only theme */
 
 @theme inline {
   --color-background: var(--background);
@@ -155,10 +144,6 @@ body {
   background: linear-gradient(to bottom, var(--secondary), var(--accent));
 }
 
-.dark ::-webkit-scrollbar-track {
-  background: #0a0a0a;
-}
-
 /* Selection styles */
 ::selection {
   background: var(--primary);
@@ -187,12 +172,6 @@ select {
 
 /* Glassmorphism utility classes */
 .glass {
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.dark .glass {
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.1);

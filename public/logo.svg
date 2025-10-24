@@ -1,0 +1,16 @@
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Outer hexagon -->
+  <path d="M24 2L42 13V35L24 46L6 35V13L24 2Z" fill="url(#logo-gradient)"/>
+  
+  <!-- Inner design - Letter K -->
+  <path d="M18 14H22V24L28 14H32L26 24L32 34H28L22 24V34H18V14Z" fill="white"/>
+
+  <!-- Gradient definition -->
+  <defs>
+    <linearGradient id="logo-gradient" x1="6" y1="2" x2="42" y2="46" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#6b7280"/>
+    </linearGradient>
+  </defs>
+</svg>
+

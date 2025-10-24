@@ -3,29 +3,11 @@
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Logo from "./Logo";
 
 export default function Navbar() {
-  const [isDark, setIsDark] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-
-  useEffect(() => {
-    // Load theme from localStorage
-    const savedTheme = localStorage.getItem("theme");
-    const prefersDark = window.matchMedia(
-      "(prefers-color-scheme: dark)"
-    ).matches;
-
-    const shouldBeDark = savedTheme === "dark" || (!savedTheme && prefersDark);
-
-    if (shouldBeDark) {
-      document.documentElement.classList.add("dark");
-      setIsDark(true);
-    } else {
-      document.documentElement.classList.remove("dark");
-      setIsDark(false);
-    }
-  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -34,19 +16,6 @@ export default function Navbar() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
-  const toggleDarkMode = () => {
-    const newDarkMode = !isDark;
-    setIsDark(newDarkMode);
-
-    if (newDarkMode) {
-      document.documentElement.classList.add("dark");
-      localStorage.setItem("theme", "dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-      localStorage.setItem("theme", "light");
-    }
-  };
 
   const navItems = [
     { href: "/", label: "Home" },
@@ -62,21 +31,19 @@ export default function Navbar() {
       transition={{ duration: 0.6, ease: "easeOut" }}
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-white/80 dark:bg-black/20 backdrop-blur-xl border-b border-gray-200 dark:border-white/10"
+          ? "bg-black/20 backdrop-blur-xl border-b border-white/10"
           : "bg-transparent"
       }`}
     >
       <div className="container">
         <div className="flex justify-between items-center h-24">
           {/* Logo */}
-          <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-            <Link
-              href="/"
-              className="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-blue-400 to-gray-400 bg-clip-text text-transparent px-2 py-1"
-            >
+          <Link href="/" className="flex items-center gap-3 sm:gap-4 group">
+            <Logo size="md" />
+            <span className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-blue-400 to-gray-400 bg-clip-text text-transparent group-hover:from-blue-500 group-hover:to-gray-500 transition-all duration-300">
               Kamil Karatov
-            </Link>
-          </motion.div>
+            </span>
+          </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-lg">
@@ -89,7 +56,7 @@ export default function Navbar() {
               >
                 <Link
                   href={item.href}
-                  className="relative text-gray-700 dark:text-white/80 hover:text-gray-900 dark:hover:text-white transition-colors duration-300 group px-md py-sm text-base lg:text-lg font-medium"
+                  className="relative text-white/80 hover:text-white transition-colors duration-300 group px-md py-sm text-base lg:text-lg font-medium"
                 >
                   {item.label}
                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-400 to-gray-400 transition-all duration-300 group-hover:w-full"></span>
@@ -98,51 +65,14 @@ export default function Navbar() {
             ))}
           </nav>
 
-          {/* Dark Mode Toggle & Mobile Menu Button */}
-          <div className="flex items-center gap-sm">
-            <motion.button
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-              onClick={toggleDarkMode}
-              className="p-2.5 sm:p-3 rounded-full bg-gray-100 dark:bg-white/10 backdrop-blur-sm border border-gray-200 dark:border-white/20 text-gray-700 dark:text-white hover:bg-gray-200 dark:hover:bg-white/20 transition-all duration-300"
-            >
-              {isDark ? (
-                <svg
-                  className="w-5 h-5 sm:w-6 sm:h-6"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
-                  />
-                </svg>
-              ) : (
-                <svg
-                  className="w-5 h-5 sm:w-6 sm:h-6"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
-                  />
-                </svg>
-              )}
-            </motion.button>
-
+          {/* Mobile Menu Button */}
+          <div className="flex items-center">
             {/* Mobile menu button */}
             <motion.button
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="md:hidden p-2.5 sm:p-3 rounded-full bg-gray-100 dark:bg-white/10 backdrop-blur-sm border border-gray-200 dark:border-white/20 text-gray-700 dark:text-white"
+              className="md:hidden p-2.5 sm:p-3 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white"
             >
               <svg
                 className="w-6 h-6 sm:w-7 sm:h-7"
@@ -179,7 +109,7 @@ export default function Navbar() {
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
-            className="md:hidden bg-white/80 dark:bg-black/40 backdrop-blur-xl border-t border-gray-200 dark:border-white/10"
+            className="md:hidden bg-black/40 backdrop-blur-xl border-t border-white/10"
           >
             <div className="px-lg py-xl flex flex-col gap-md">
               {navItems.map((item, index) => (
@@ -192,7 +122,7 @@ export default function Navbar() {
                   <Link
                     href={item.href}
                     onClick={() => setIsMobileMenuOpen(false)}
-                    className="block text-gray-700 dark:text-white/80 hover:text-gray-900 dark:hover:text-white transition-colors duration-300 py-md px-lg text-lg font-medium rounded-lg hover:bg-gray-100 dark:hover:bg-white/10"
+                    className="block text-white/80 hover:text-white transition-colors duration-300 py-md px-lg text-lg font-medium rounded-lg hover:bg-white/10"
                   >
                     {item.label}
                   </Link>
